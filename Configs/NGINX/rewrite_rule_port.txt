@@ -1,0 +1,7 @@
+# Danke an: 
+# http://mailman.nginx.org/pipermail/nginx/2016-September/051854.html
+# http://stackoverflow.com/a/23859008/5605489
+
+if (-d $request_filename) {
+	rewrite [^/]$ $scheme://$http_host$uri/ permanent;
+}
